@@ -9,7 +9,7 @@ type productsProps = ({
   handler:()=>void;
 })
 
-const ProductCart = ({productId,photo,name,price,stock,handler}:productsProps) => {
+const ProductCard = ({productId,photo,name,price,stock,handler}:productsProps) => {
   return (
     <div className="product_card">
       <img src={photo} alt={name} />
@@ -23,4 +23,4 @@ const ProductCart = ({productId,photo,name,price,stock,handler}:productsProps) =
   )
 }
 
-export default ProductCart
+export default ProductCard

@@ -39,6 +39,7 @@ $color3: rgb(0, 104, 136);
 @import "home";
 @import "cart";
 @import "shipping";
+@import "search";
 
 .header {
   @include flex(row, flex-end, strech, 1.2rem);
