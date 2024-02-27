@@ -2,9 +2,12 @@ import { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Loader from "./components/loader";
 import Header from "./components/header";
+
 const Home = lazy(() => import("./pages/home"));
 const Search = lazy(() => import("./pages/search"));
 const Cart = lazy(() => import("./pages/cart"));
+const Shipping = lazy(() => import("./pages/shipping"));
+
 
 /// admin imports
 const Dashboard = lazy(() => import("./pages/admin/dashboard"));
@@ -36,6 +39,15 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<Search />} />
           <Route path="/cart" element={<Cart />} />
+
+          {/* Logged in user */}
+          <Route>
+            <Route path="/shipping" element={<Shipping />} />
+          </Route>
+
+
+
+
           {/* ADMIN ROUTES */}
           <Route
             // element={
